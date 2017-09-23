@@ -1,33 +1,41 @@
 extends ../../../templates/master.pug
 block content
-    section.hero.is-black
+    section.hero.is-black.is-bold
         .hero-body
             img.ui.image.is-pulled-right(style="width: 150px; height:150px;", src='/assets/images/pup_logo.png')
             i.fa.fa-shopping-cart.fa-5x 
-                | PUP Student Market
-            br
-            br
-            br
+                | PUP Student <br> Market
             br
             br
             hr
             section.hero.is-primary.is-bold
                 .hero-body
                     div.container(style='height:10%')
-                        i.fa.fa-sign-in.fa-2x 
-                            | Sign-in
-                        br
-                        br
+                        h1.title <bold> Sign-in </bold>
                         form(method="POST" action="/login")
                             .field
-                                .control
-                                    input.input(type="text" placeholder="Student Number" name="studnum")
+                                label.label Username
+                                    .control.has-icons-left.has-icons-right
+                                        input.input.is-success(type="text", placeholder="Student Number", name='studnum')
+                                        span.icon.is-small.is-left
+                                            i.fa.fa-user
+                                        span.icon.is-small.is-right
+                                            i.fa.fa-check
+                            //- .field
+                            //-     .control
+                            //-         input.input(type="text" placeholder="Student Number" name="studnum")
+                            //- .field
+                            //-     .control
+                            //-         input.input(type="password" placeholder="Password" name="password")
                             .field
-                                .control
-                                    input.input(type="password" placeholder="Password" name="password")
+                                label.label Password
+                                    p.control.has-icons-left
+                                        input.input(type='password', placeholder='Password',name="password")
+                                        span.icon.is-small.is-left
+                                            i.fa.fa-lock
+
                             input.button.is-pulled-left(type="submit" value="Sign-in")
                             br
-                            hr
                         a.button.is-pulled-left(class="button", href="/register") REGISTER
 
 

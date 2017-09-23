@@ -8,6 +8,15 @@ block content
           h3.subtitle &nbspAll fields are required
           form(method="POST" action="/sell")
               .field
+                    .file.is-boxed
+                        label.file-label
+                            input.file-input(type='file', name='resume')
+                            span.file-cta
+                                span.file-icon
+                                    i.fa.fa-upload
+                            span.file-label
+                                | Choose a file…
+              .field
                   .control
                       .select.is-primary
                           select(name="category")

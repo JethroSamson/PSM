@@ -5,42 +5,39 @@ html
         link(rel="stylesheet" href="/assets/bulma/bulma.css")
         link(rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css")
         link(rel="stylesheet" href="/assets/font-awesome-4.7.0/css/button_categories.css")
-    section.hero.is-dark
+    section.hero.is-primary.is-bold
         .hero-body
+            div.navbar-left
+                i.fa.fa-shopping-cart.fa-3x
+                        |&nbsp; PUP STUDENT <br> MARKET
+            div.navbar-brand.is-pulled-right
+                a.navbar-item.button(href="/sell") 
+                    i.fa.fa-handshake-o.fa
+                        |&nbsp; SELL
+                |&nbsp;
+                |&nbsp;
                 div.navbar-brand
-                    a.button(href="/home") 
-                        i.fa.fa-shopping-cart.fa-3x
-                        | PUP STUDENT MARKET 
+                    a.navbar-item.button(href="/profile")
+                        i.fa.fa-user.fa
+                            |&nbsp; Profile
                     |&nbsp;
                     |&nbsp;
-                    div.navbar-brand
-                        a.button(href="/sell") 
-                            i.fa.fa-handshake-o.fa-2x
-                            |  SELL
+                div.navbar-brand.is-pulled-right
+                    .control
+                        input.input(type='text', placeholder='Find an Item.')  
+                    .control
+                        a.button.is-info
+                            | Search
                     |&nbsp;
                     |&nbsp;
-                    div.navbar-brand
-                        a.button(href="/profile")
-                            i.fa.fa-user.fa-2x
-                            | Profile
-                    |&nbsp;
-                    |&nbsp;
-                    div.navbar-brand.is-pulled-right
-                        .control
-                            input.input(type='text', placeholder='Find an Item.')  
-                        .control
-                            a.button.is-info
-                                | Search
-                    |&nbsp;
-                    |&nbsp;
-                    div.navbar-end.hero.is-body
-                        div.navbar-item.has-dropdown.is-hoverable
-                            a.navbar-link: span.icon: i.fa.fa-cogs.fa-3x
-                            div.navbar-dropdown.is-right
-                                a.navbar-item(href="/home/rules") Rules
-                                a.navbar-item(href="/home/help") Help
-                                a.navbar-item(href="/home/contact_us") Contact Us
-                                a.navbar-item(href="/login") Log-Out
+                div.navbar-end
+                    div.navbar-item.has-dropdown.is-hoverable.button
+                        a.navbar-link: span.icon: i.fa.fa-cogs.fa-3x
+                        div.navbar-dropdown.is-right
+                            a.navbar-item(href="/home/rules") Rules
+                            a.navbar-item(href="/home/help") Help
+                            a.navbar-item(href="/home/contact_us") Contact Us
+                            a.navbar-item(href="/login") Log-Out
 
     div.container
                     //- This part right here is the dynamic content. Once you extend
